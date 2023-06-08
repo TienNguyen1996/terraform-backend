@@ -1,7 +1,7 @@
 resource "aws_s3_bucket" "backend" {
-  bucket = "${Component}-${Environment}-backend-bucket"
+  bucket = "${var.Component}-${var.Environment}-backend-bucket"
   tags = {
-    Component   = "${Component}"
-    Environment = "${Environment}"
+    Component   = "${var.Component}"
+    Environment = "${var.Environment}"
   }
 }
